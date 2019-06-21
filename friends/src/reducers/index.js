@@ -1,6 +1,6 @@
 import { combineReducers } from 'redux';
-import { mainReducer } from './starWarsReducer';
+import { reducer } from './mainReducer.js';
 
 export default combineReducers({
-  mainReducer
+  reducer
 });
