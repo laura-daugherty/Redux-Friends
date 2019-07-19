@@ -52,6 +52,19 @@ h5 {
   margin-bottom: 10px;
   display: block;
 }
+.nav {
+  display: flex;
+  justify-content: space-evenly;
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 550px;
+}
+.link {
+  font-size: 16px;
+  color: darken(#999, 10%);
+  margin-bottom: 10px;
+  display: block;
+}
 
 .form-group {
   margin-bottom: 20px;

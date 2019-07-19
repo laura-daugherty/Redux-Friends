@@ -1,33 +1,25 @@
 import React from 'react';
-import ReactDOM from "react-dom";
 import {
-  BrowserRouter,
   Route,
   Link,
-  Redirect
 } from "react-router-dom";
-import axios from "axios";
 import Login from "./components/Login";
-import Profile from "./components/Profile";
+import PrivateRoute from "./components/PrivateRoute"
+import FriendsList from "./components/FriendsList"
 
 import "./App.css"
 
 function App() {
   return (
     <div className="App" style={{ padding: 30 }}>
-      <div>
-        <Link to="/">Login</Link>
-        <Link to="/profile">Profile</Link>
-      </div>
+      <nav className="nav">
+        <Link to="/" className="link">Login</Link>
+      </nav>
       <Route 
         exact path="/" 
-        component={Login} 
+        component={Login}
       />
-      <Route 
-        exact path="/profile"
-        render={Profile}
-      />
-      <h1>This is an App</h1>
+      <PrivateRoute exact path='/friendsList' component={FriendsList} />
     </div>
   );
 }
